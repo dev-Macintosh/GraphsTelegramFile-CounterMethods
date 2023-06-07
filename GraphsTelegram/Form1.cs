@@ -5,6 +5,7 @@ using Timer = System.Threading.Timer;
 using TL;
 using WTelegram;
 using System.Windows.Forms.DataVisualization.Charting;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace GraphsTelegram
 {
@@ -21,7 +22,7 @@ namespace GraphsTelegram
         }
         private void chartDraw()
         {
-            Timer timer = new Timer(new TimerCallback(setPoint), null, 0, 2000);
+            Timer timer = new Timer(new TimerCallback(setPoint), null, 0, 200);
         }
         private void button_Click(object? sender, EventArgs e)
         {
@@ -31,6 +32,8 @@ namespace GraphsTelegram
         {
             this.chart.Series[0].Points.Add(mb);
             mb += 50;
+            if (mb == 500)
+                mb = 0;
         }
         static string Config(string what)
         {
@@ -52,19 +55,7 @@ namespace GraphsTelegram
             clientTl = new WTelegram.Client(Config);
             var myself = await clientTl.LoginUserIfNeeded();
             var chats = await clientTl.Messages_GetAllChats();
-            InputPeer peer = chats.chats.First(chat => chat.Value.ID == TargetChatId).Value.ToInputPeer();
-            for (int offset = 0; ;)
-            {
-                var messagesBase = await clientTl.Messages_GetHistory(peer, 0, default, offset, 1000, 0, 0, 0);
-                if (messagesBase is not Messages_ChannelMessages channelMessages) break;
-                foreach (var msgBase in channelMessages.messages.OrderByDescending(m => m.Date))
-                    if (msgBase is TL.Message msg)
-                    {
-//                        Console.WriteLine(msgBase.Date.ToLocalTime());
-                    }
-                offset += channelMessages.messages.Length;
-                if (offset >= channelMessages.count) break;
-            }
+
 
 
         }
@@ -72,6 +63,8 @@ namespace GraphsTelegram
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
 
+
     }
+
 
 }

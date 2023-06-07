@@ -51,7 +51,7 @@ namespace GraphsTelegram
             chart.Name = "chart";
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = SeriesChartType.Spline;
+            series1.ChartType = SeriesChartType.Line;
             series1.Color = Color.Black;
             series1.LabelForeColor = Color.BlanchedAlmond;
             series1.Legend = "Legend1";
