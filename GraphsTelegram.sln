@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphsTelegram", "GraphsTelegram\GraphsTelegram.csproj", "{E310B2F5-DC22-4FD6-B8BD-8A651E3CEE1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountMethodsTelegramAPI", "CountMethodsTelegramAPI\CountMethodsTelegramAPI.csproj", "{FC91ADD7-FCEF-4086-8E3A-AA33DA884345}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E310B2F5-DC22-4FD6-B8BD-8A651E3CEE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E310B2F5-DC22-4FD6-B8BD-8A651E3CEE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E310B2F5-DC22-4FD6-B8BD-8A651E3CEE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E310B2F5-DC22-4FD6-B8BD-8A651E3CEE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC91ADD7-FCEF-4086-8E3A-AA33DA884345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC91ADD7-FCEF-4086-8E3A-AA33DA884345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC91ADD7-FCEF-4086-8E3A-AA33DA884345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC91ADD7-FCEF-4086-8E3A-AA33DA884345}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1F93E12-52DB-4CBF-AA70-8C0722BF678F}
+	EndGlobalSection
+EndGlobal
